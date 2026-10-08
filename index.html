@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhijith Pallineni — Android Developer</title>
+<meta name="description" content="Portfolio of Abhijith Pallineni, Android Developer specializing in Kotlin, Jetpack Compose and scalable mobile architecture.">
+<style>
+  :root{
+    --bg:#0b0f14; --bg2:#10161f; --card:#141c28; --line:#1f2a3d;
+    --txt:#e8eef6; --mut:#93a1b5; --acc:#3ddc84; --acc2:#7c5cff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--txt);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;line-height:1.65;overflow-x:hidden}
+  a{color:var(--acc);text-decoration:none}
+  .wrap{max-width:1024px;margin:0 auto;padding:0 24px}
+  /* hero */
+  header{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden}
+  .blob{position:absolute;border-radius:50%;filter:blur(110px);opacity:.35;animation:drift 14s ease-in-out infinite alternate}
+  .b1{width:420px;height:420px;background:var(--acc);top:-120px;right:-80px}
+  .b2{width:340px;height:340px;background:var(--acc2);bottom:-100px;left:-100px;animation-delay:-6s}
+  @keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(-60px,50px) scale(1.12)}}
+  .hero{position:relative;z-index:2}
+  .tag{display:inline-block;border:1px solid var(--acc);color:var(--acc);border-radius:999px;padding:6px 18px;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px}
+  h1{font-size:clamp(2.6rem,6vw,4.4rem);line-height:1.08;font-weight:800}
+  h1 .grad{background:linear-gradient(92deg,var(--acc),#6ee7ff 60%,var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{color:var(--mut);font-size:1.15rem;max-width:640px;margin:20px 0 34px}
+  .btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:13px 30px;border-radius:12px;font-weight:600;transition:transform .18s,box-shadow .18s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.pri{background:var(--acc);color:#06281a;box-shadow:0 8px 30px rgba(61,220,132,.25)}
+  .btn.gho{border:1px solid var(--line);color:var(--txt);background:var(--card)}
+  .links{margin-top:30px;display:flex;gap:20px;flex-wrap:wrap;color:var(--mut);font-size:.95rem}
+  /* sections */
+  section{padding:84px 0}
+  .kicker{color:var(--acc);text-transform:uppercase;letter-spacing:3px;font-size:.8rem;margin-bottom:10px}
+  h2{font-size:2rem;margin-bottom:8px}
+  .lede{color:var(--mut);max-width:700px;margin-bottom:36px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;transition:transform .18s,border-color .18s}
+  .card:hover{transform:translateY(-4px);border-color:var(--acc)}
+  .card h3{font-size:1.05rem;margin-bottom:14px;color:var(--acc)}
+  .pill{display:inline-block;background:#0e1420;border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-size:.82rem;margin:0 7px 9px 0;color:var(--txt)}
+  /* timeline */
+  .tl{position:relative;margin-top:10px;padding-left:30px}
+  .tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--acc),var(--acc2))}
+  .job{position:relative;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 28px;margin-bottom:22px}
+  .job::before{content:"";position:absolute;left:-28px;top:30px;width:14px;height:14px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 5px rgba(61,220,132,.15)}
+  .job .when{color:var(--acc);font-size:.85rem;letter-spacing:1px;text-transform:uppercase}
+  .job h3{font-size:1.25rem;margin:6px 0 2px}
+  .job .role{color:var(--mut);font-style:italic;margin-bottom:12px}
+  .job ul{padding-left:20px;color:#c6d2e2;font-size:.95rem}
+  .job li{margin-bottom:7px}
+  /* contact */
+  .contact{background:linear-gradient(135deg,#0e1a12,#12141f);border:1px solid var(--line);border-radius:22px;padding:56px 40px;text-align:center}
+  .contact h2{margin-bottom:10px}
+  footer{text-align:center;color:var(--mut);font-size:.85rem;padding:34px 0 44px}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+  .reveal.on{opacity:1;transform:none}
+  @media(max-width:640px){.contact{padding:40px 22px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="wrap hero">
+    <span class="tag">Android Developer</span>
+    <h1>Hi, I'm <span class="grad">Abhijith Pallineni</span>.<br>I build Android apps people love.</h1>
+    <p class="sub">9+ years crafting scalable, high-performance mobile experiences — from Fortune 500 flagships at Walmart and American Express to consumer apps used by millions. Kotlin · Jetpack Compose · Clean Architecture.</p>
+    <div class="btns">
+      <a class="btn pri" href="Abhijith_Pallineni_Resume.pdf" download>Download Résumé</a>
+      <a class="btn gho" href="#work">See Experience</a>
+    </div>
+    <div class="links">
+      <span>abhijithpnvs@gmail.com</span>
+      <span>+1 (716) 579-3867</span>
+      <a href="https://www.linkedin.com/in/abhijith-pallineni" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Abhijith-PNVS" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="kicker">About</div>
+    <h2>Engineering mobile products end-to-end</h2>
+    <p class="lede">I specialize in native Android development with modern declarative UI, reactive state management, and test-driven practices — and I've shipped across the stack: mobile, backend services, and CI/CD pipelines. I care about pixel-perfect UI, clean testable architecture, and measurable performance.</p>
+    <div class="grid">
+      <div class="card reveal"><h3>Native Android</h3><div><span class="pill">Kotlin</span><span class="pill">Java</span><span class="pill">Jetpack Compose</span><span class="pill">Android SDK</span><span class="pill">Coroutines / Flow</span><span class="pill">StateFlow</span><span class="pill">ViewModel</span><span class="pill">Room</span><span class="pill">Hilt / Dagger</span><span class="pill">Koin</span></div></div>
+      <div class="card reveal"><h3>Architecture</h3><div><span class="pill">MVVM</span><span class="pill">MVI</span><span class="pill">Clean Architecture</span><span class="pill">TDD</span><span class="pill">Modularization</span><span class="pill">Offline-first</span></div></div>
+      <div class="card reveal"><h3>APIs &amp; Backend</h3><div><span class="pill">REST</span><span class="pill">GraphQL</span><span class="pill">Retrofit / OkHttp</span><span class="pill">gRPC</span><span class="pill">OAuth 2.0 / JWT</span><span class="pill">.NET Core</span><span class="pill">Firebase</span></div></div>
+      <div class="card reveal"><h3>Quality &amp; Delivery</h3><div><span class="pill">JUnit</span><span class="pill">Espresso</span><span class="pill">MockK / Mockito</span><span class="pill">CI/CD</span><span class="pill">Fastlane</span><span class="pill">GitHub Actions</span><span class="pill">Play Console</span><span class="pill">Baseline Profiles</span></div></div>
+      <div class="card reveal"><h3>Cross-Platform</h3><div><span class="pill">Flutter / Dart</span><span class="pill">React Native</span><span class="pill">Swift / SwiftUI</span></div></div>
+      <div class="card reveal"><h3>Cloud &amp; Data</h3><div><span class="pill">AWS</span><span class="pill">Azure DevOps</span><span class="pill">Google Cloud</span><span class="pill">PostgreSQL</span><span class="pill">SQLite</span><span class="pill">Firebase RTDB</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="work" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="kicker">Experience</div>
+    <h2>Where I've shipped</h2>
+    <p class="lede">A decade of mobile engineering across retail, fintech, media, and consumer apps.</p>
+    <div class="tl">
+      <div class="job reveal">
+        <div class="when">Sep 2024 — Present · California</div>
+        <h3>Walmart</h3><div class="role">Sr. Android Developer</div>
+        <ul>
+          <li>Architected seller-facing Android workflows with Jetpack ViewModel, StateFlow, Kotlin Coroutines and MVVM for multi-step experiences like Add Item and product onboarding.</li>
+          <li>Built Add Item and Attachments flows for efficient product/media upload with seamless UX.</li>
+          <li>Integrated RESTful APIs and GraphQL with validation, error handling and reusable networking components.</li>
+          <li>Hardened stability with lifecycle-aware state collection and structured concurrency; unit &amp; UI tests (JUnit, Espresso) guard critical seller flows.</li>
+        </ul>
+      </div>
+      <div class="job reveal">
+        <div class="when">Mar 2022 — Aug 2024 · California</div>
+        <h3>American Express (Kabbage)</h3><div class="role">Android Developer</div>
+        <ul>
+          <li>Built advanced Android features in Kotlin — Jetpack Compose, Coroutines/Flow, MVVM, Hilt — clean, testable code.</li>
+          <li>Drove performance via Baseline Profiles, R8/ProGuard, LeakCanary and Studio profilers; fixed high-priority bugs and bottlenecks.</li>
+          <li>Kept CI green with automated tests (JUnit, MockK, Espresso/Compose UI); mentored juniors and ran code reviews.</li>
+          <li>Shipped with staged rollouts via Play Console; Git + CI/CD (GitHub Actions, Jenkins, Fastlane).</li>
+        </ul>
+      </div>
+      <div class="job reveal">
+        <div class="when">Nov 2020 — Feb 2022 · New York</div>
+        <h3>Volv Media</h3><div class="role">Android Developer</div>
+        <ul>
+          <li>Built Kotlin features with Jetpack Compose, MVVM, Coroutines/Flow and Hilt in clean, maintainable modules.</li>
+          <li>Integrated REST services and vehicle data streams; offline storage with Room and reactive Flow pipelines.</li>
+          <li>Eliminated jank/ANR bottlenecks on constrained head-unit hardware; tested with Turbine, Espresso/Compose UI in CI.</li>
+        </ul>
+      </div>
+      <div class="job reveal">
+        <div class="when">Feb 2019 — Apr 2020 · India</div>
+        <h3>Cred</h3><div class="role">Android Developer</div>
+        <ul>
+          <li>Led Android development in Kotlin/Java with MVVM; refactored to RxJava + LiveData for responsiveness.</li>
+          <li>Built secure payment gateway with Stripe + OAuth; real-time transactions via FCM; penetration-tested for resilience.</li>
+          <li>Maintained .NET (C#) backend services supporting mobile data persistence and microservices.</li>
+        </ul>
+      </div>
+      <div class="job reveal">
+        <div class="when">May 2014 — Feb 2019 · India</div>
+        <h3>Swiggy</h3><div class="role">Web Developer</div>
+        <ul>
+          <li>Led robust web apps in PHP/Laravel, JavaScript (ES6) and MySQL for a rapidly scaling user base.</li>
+          <li>Designed RESTful APIs in ASP.NET Core; integrated PayU/CCAvenue payment gateways with real-time monitoring.</li>
+          <li>Automated CI/CD with Azure DevOps; deployed on Apache/Nginx tuned for peak traffic.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="edu">
+  <div class="wrap">
+    <div class="kicker">Education</div>
+    <h2>Background</h2>
+    <div class="grid" style="margin-top:24px">
+      <div class="card reveal"><h3>Vellore Institute of Technology</h3><p style="color:var(--mut)">B.Tech, Electronics &amp; Communication Engineering<br>2011 – 2015 · India</p></div>
+      <div class="card reveal"><h3>Compliance &amp; Security</h3><p style="color:var(--mut)">Well-versed in GDPR, ISO 27001 and PCI DSS for secure mobile development. OWASP mobile practices, token-based auth, penetration testing.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="contact reveal">
+      <div class="kicker">Get in touch</div>
+      <h2>Let's build something great.</h2>
+      <p class="lede" style="margin:0 auto 30px">Open to Android roles — remote or on-site. The fastest way to reach me is email.</p>
+      <div class="btns" style="justify-content:center">
+        <a class="btn pri" href="mailto:abhijithpnvs@gmail.com">abhijithpnvs@gmail.com</a>
+        <a class="btn gho" href="https://www.linkedin.com/in/abhijith-pallineni" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn gho" href="Abhijith_Pallineni_Resume.pdf" download>Résumé (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Abhijith Pallineni · Built with care</footer>
+
+<script>
+  const io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
